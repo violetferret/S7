@@ -3,6 +3,11 @@ class Platformer extends Phaser.Scene {
         super("platformerScene");
     }
 
+    preload() {
+        // Load animation plugin
+        this.load.scenePlugin('AnimatedTiles', './lib/AnimatedTiles.js', 'animatedTiles', 'animatedTiles');
+    }
+
     init() {
         // variables and settings
         this.ACCELERATION = 400;
@@ -25,7 +30,7 @@ class Platformer extends Phaser.Scene {
 
         // Create a layer
         this.groundLayer = this.map.createLayer("Ground-n-Platforms", this.tileset, 0, 0);
-
+        
         // Make it collidable
         this.groundLayer.setCollisionByProperty({
             collides: true
@@ -50,6 +55,8 @@ class Platformer extends Phaser.Scene {
         // Create a Phaser group out of the array this.coins
         // This will be used for collision detection below.
         this.coinGroup = this.add.group(this.coins);
+
+        this.animatedTiles.init(this.map);
 
         // set up player avatar
         my.sprite.player = this.physics.add.sprite(30, 345, "platformer_characters", "tile_0000.png");

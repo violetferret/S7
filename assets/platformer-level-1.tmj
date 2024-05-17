@@ -326,7 +326,7 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":74,
+ "nextobjectid":76,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
@@ -417,6 +417,15 @@
                         }]
                 }, 
                 {
+                 "animation":[
+                        {
+                         "duration":500,
+                         "tileid":33
+                        }, 
+                        {
+                         "duration":500,
+                         "tileid":53
+                        }],
                  "id":33,
                  "properties":[
                         {
@@ -507,6 +516,15 @@
                         }]
                 }, 
                 {
+                 "animation":[
+                        {
+                         "duration":500,
+                         "tileid":53
+                        }, 
+                        {
+                         "duration":500,
+                         "tileid":33
+                        }],
                  "id":53,
                  "properties":[
                         {
@@ -703,6 +721,18 @@
                          "type":"bool",
                          "value":true
                         }]
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":200,
+                         "tileid":151
+                        }, 
+                        {
+                         "duration":200,
+                         "tileid":152
+                        }],
+                 "id":151
                 }],
          "tilewidth":18
         }],
